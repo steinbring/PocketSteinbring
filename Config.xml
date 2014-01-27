@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "net.steinbring.PocketJoe"
+        versionCode = "10" 
+        version     = "0.01" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Pocket Joe</name>
+
+    <description>
+        A way of reading all about Joe Steinbring from within one application.
+    </description>
+
+    <author href="http://steinbring.net" email="joe@steinbring.net">
+        Joe Steinbring
+    </author>
+    
+    <preference name="permissions" value="none"/>
+
+</widget>
