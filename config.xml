@@ -17,6 +17,9 @@
         Joe Steinbring
     </author>
     
+    <access origin="http://steinbring.net" subdomains="true" />
+    <access origin="http://jquery.com" subdomains="true" />
+    
     <preference name="permissions" value="none"/>
 
 </widget>
