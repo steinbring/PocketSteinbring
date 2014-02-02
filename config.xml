@@ -18,7 +18,7 @@
     </author>
     
     <access origin="http://steinbring.net" subdomains="true" />
-    <access origin="http://jquery.com" subdomains="true" />
+    <access origin="http://twitter.com" subdomains="true" />
     
     <preference name="permissions" value="none"/>
 
