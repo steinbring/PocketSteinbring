@@ -21,6 +21,7 @@
     
     <access origin="http://steinbring.net" subdomains="true" />
     <access origin="http://twitter.com" subdomains="true" />
+    <access origin="http://query.yahooapis.com" subdomains="true" />
     
     <preference name="permissions" value="none"/>
 
