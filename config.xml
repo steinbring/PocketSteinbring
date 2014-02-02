@@ -21,8 +21,13 @@
     
     <access origin="http://steinbring.net" subdomains="true" />
     <access origin="http://platform.twitter.com" subdomains="true" />
-    <access origin="http://twimg.com" subdomains="true" />
+    <access origin="http://cdn.syndication.twimg.com" subdomains="true" />
+    <access origin="http://pbs.twimg.com" subdomains="true" />
+    <access origin="http://twitter.com" subdomains="true" />
+    <access origin="http://syndication.twitter.com" subdomains="true" />
     <access origin="http://query.yahooapis.com" subdomains="true" />
+
+    <preference name="stay-in-webview" value="false" />
     
     <preference name="permissions" value="none"/>
 
