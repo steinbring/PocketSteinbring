@@ -16,10 +16,14 @@
     <author href="http://steinbring.net" email="joe@steinbring.net">
         Joe Steinbring
     </author>
+
+    <preference name="phonegap-version" value="3.1.0" />
     
     <access origin="http://steinbring.net" subdomains="true" />
     <access origin="http://twitter.com" subdomains="true" />
     
     <preference name="permissions" value="none"/>
+
+    <icon src="img/FlipFace-Joe-Small.png" />
 
 </widget>
