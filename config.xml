@@ -18,6 +18,10 @@
     </author>
 
     <preference name="phonegap-version" value="3.1.0" />
+
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
     
     <access origin="http://steinbring.net" subdomains="true" />
     <access origin="http://platform.twitter.com" subdomains="true" />
