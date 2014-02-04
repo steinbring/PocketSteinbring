@@ -117,7 +117,7 @@
 		<ul data-role="listview">
 			<li data-icon="back"><a href="#" data-rel="close">Close</a></li>
 			<li><a href="#about">About Joe</a></li>
-			<li><a href="#blog">Blog</a></li>
+			<li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
 			<li><a href="#acknoledgements">Acknoledgements</a>
 		</ul>
 	</div>
@@ -141,7 +141,7 @@
 		    for (i=0; i<10; i++)
 		      {
 		      // Output the blog posts
-		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a" target="_new')+'</p></div>';
+		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a" target="_system" location="yes')+'</p></div>';
         	  $('#'+list).append( content ).collapsibleset( "refresh" );
 		    }
 		});
