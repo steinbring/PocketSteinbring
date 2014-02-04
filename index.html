@@ -145,9 +145,10 @@
 		    }
 		});
 	  };
-
-	  // Get Steinbring.net's RSS Feed
-	  getRSSFeed('http://steinbring.net/feed/','BlogList');
+	  $( document ).ready(function() {
+		  // Get Steinbring.net's RSS Feed
+		  getRSSFeed('http://steinbring.net/feed/','BlogList');
+		});
 	</script>
 </body>
 </html>
