@@ -27,7 +27,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#about">About Joe</a></li>
-				<li><a href="#blog">Blog</a></li>
+				<li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
 			</ul>
 		</div>
 	</div><!-- /header -->
@@ -69,7 +69,6 @@
 			<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="BlogList">
 				
 			</div>
-			<a class="ui-btn ui-shadow ui-corner-all ui-btn-a" href="#" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Refresh</a>
 		</div><!-- /content -->
 
 		<div data-role="footer" data-position="fixed">
@@ -147,10 +146,6 @@
 		    }
 		});
 	  };
-	  $( document ).ready(function() {
-		  // Get Steinbring.net's RSS Feed
-		  getRSSFeed('http://steinbring.net/feed/','BlogList');
-		});
 	</script>
 </body>
 </html>
