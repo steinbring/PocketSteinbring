@@ -141,7 +141,7 @@
 		    for (i=0; i<10; i++)
 		      {
 		      // Output the blog posts
-		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a" target="_system')+'</p></div>';
+		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a ui-link" target="_system')+'</p></div>';
         	  $('#'+list).append( content ).collapsibleset( "refresh" );
 		    }
 		});
