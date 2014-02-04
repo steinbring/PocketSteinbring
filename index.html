@@ -136,11 +136,12 @@
 
 		  // Take the data you got from the YQL server and output it to the screen.  The variable "data" holds the JSON you got back from the YQL server.
 		  function(data) {
+		  	console.table(data.query.results);
 		    // Just bother with the last 10 entries within the JSON feed
 		    for (i=0; i<10; i++)
 		      {
 		      // Output the blog posts
-		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a" target="_new')+'</p></div>';
+		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].encoded+'</p></div>';
         	  $('#'+list).append( content ).collapsibleset( "refresh" );
 		    }
 		});
