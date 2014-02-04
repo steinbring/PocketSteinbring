@@ -66,10 +66,9 @@
 
 		<div role="main" class="ui-content">
 
-		<ul data-role="listview" data-inset="true" id="BlogList">
-		    <li data-role="list-divider">Blog<span class="ui-li-count">10</span></li>
-		</ul>
-
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="BlogList">
+				
+			</div>
 		</div><!-- /content -->
 
 		<div data-role="footer" data-position="fixed">
@@ -87,7 +86,6 @@
 		<h2>Acknoledgements</h2>
 
 		<p>This application was written as an experiment into what can be done with PhoneGap.  I wrote it using HTML, jQuery Mobile, and PhoneGap Build.</p>
-		<p>The source code and binaries for this application are available via <a href="http://steinbring.net" target="_system" class="ui-btn-a">my website</a>.</p>
 
 		</div><!-- /content -->
 
@@ -142,7 +140,8 @@
 		    for (i=0; i<10; i++)
 		      {
 		      // Output the blog posts
-		      $('#'+list).append('<li><h2>'+data.query.results.item[i].title+'</h2><p>'+data.query.results.item[i].description.replace("<a ","<a target=\"_system\"")+'</p><p></p></li>');
+		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a" target="_system')+'</p></div>';
+        	  $('#'+list).append( content ).collapsibleset( "refresh" );
 		    }
 		});
 	  };
