@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "net.steinbring.PocketJoe"
         versionCode = "10" 
-        version     = "0.01" >
+        version     = "0.02" >
 
     <!-- versionCode is optional and Android only -->
 
