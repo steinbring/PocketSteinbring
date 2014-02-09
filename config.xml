@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "net.steinbring.MilwaukeeSoup"
+        id          = "net.steinbring.PocketJoe"
         versionCode = "10" 
-        version     = "0.02" >
+        version     = "0.01" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Milwaukee Soup</name>
+    <name>Pocket Joe</name>
 
     <description>
-        Do you enjoy a hot bowl of soup on a cold, snowy day?  Of course you do!  Milwaukee Soup provides an easy way of looking up the soup of the day at some of Milwaukee's best restaurants.
+        A way of reading all about Joe Steinbring from within one application.
     </description>
 
     <author href="http://steinbring.net" email="joe@steinbring.net">
@@ -19,10 +19,16 @@
 
     <preference name="phonegap-version" value="3.1.0" />
     
-    <access origin="http://www.kimonolabs.com" subdomains="true" />
+    <access origin="http://steinbring.net" subdomains="true" />
+    <access origin="http://platform.twitter.com" subdomains="true" />
+    <access origin="http://cdn.syndication.twimg.com" subdomains="true" />
+    <access origin="http://pbs.twimg.com" subdomains="true" />
+    <access origin="http://twitter.com" subdomains="true" />
+    <access origin="http://syndication.twitter.com" subdomains="true" />
+    <access origin="http://query.yahooapis.com" subdomains="true" />
     
     <preference name="permissions" value="none"/>
 
-    <icon src="img/50SoupBowl.png" />
+    <icon src="img/FlipFace-Joe-Small.png" />
 
 </widget>
