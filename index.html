@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pocket Joe</title>
+	<title>Milwaukee Soup</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -15,67 +15,44 @@
 		});
 		$( document ).one( "pageshow", function() {
 			$( "body > [data-role='header']" ).toolbar();
-			$( "body > [data-role='header'] [data-role='navbar']" ).navbar();
 		});
 	</script>
 </head>
 <body>
 
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<h1>Pocket Joe</h1>
+		<h1><a href="#about">Milwaukee Soup</a></h1>
 		<a href="#outside" data-icon="bars" data-iconpos="notext">Menu</a>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#about">About Joe</a></li>
-				<li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
-			</ul>
-		</div>
 	</div><!-- /header -->
 
 	<div data-role="page" id="about">
 
 		<div role="main" class="ui-content">
 
-		<div style="text-align:center;"><img src="img/FlipFace-Joe.jpg" style="width:90%;"></div>
-
-		<p>
-			So, who is Joe Steinbring? I currently live in Glendale, Wisconsin (a suburb of Milwaukee) and I work as an application developer at <a href="#stark" data-transition="pop">Starkmedia</a>.
-		</p>
-			I enjoy trap shooting, archery, and photography. If I am not experimenting with code, I am usually outdoors. I am a former employee of Philmont Scout Ranch and have always been fond of the outdoors.
-		</p>
-		<p>
-			I graduated in 2006 from UW-Milwaukee’s Lubar School of Business Administration with a BBA. In the spring of 2012, I graduated from Cardinal Stritch University’s College of Business Administration with an MBA.
-		</p>
-		<p style="text-align:center;">
-		<a href="https://twitter.com/steinbring" target="_new"><img src="img/twitter.png" style="margin-right:20px;"></a>
-		<a href="https://www.linkedin.com/in/steinbring" target="_new"><img src="img/linkedin.png" style="margin-right:20px;"></a>
-		<a href="https://google.com/+JoeSteinbring" target="_new"><img src="img/google-plus.png"></a>
-		</p>
+			<p style="text-align:center;">
+				<img src="img/500SoupBowl.png" style="width:80%;">
+			</p>
+			<p>
+				Welcome to Milwaukee Soup!  My goal for this app is to offer a single place to see the daily soup offerings around Milwaukee.  Right now, it shows Bella Caffe and The Soup House.  I intend on adding The Soup Market next.  Have a restaurant that you want to see added?  Add a comment in the Google Play Store or email me at <a href="mailto:joe@steinbring.net">joe@steinbring.net</a>.
+			</p>
 
 		</div><!-- /content -->
-
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar" class="footer">
-				&copy; Joe Steinbring
-			</div>
-		</div><!-- /header -->
 
 	</div><!-- /page -->
 
-	<div data-role="page" id="blog">
+	<div data-role="page" id="BellaThird">
 
 		<div role="main" class="ui-content">
 
-			<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="BlogList">
-				Loading ...
-			</div>
 		</div><!-- /content -->
 
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar" class="footer">
-				&copy; Joe Steinbring
-			</div>
-		</div><!-- /header -->
+	</div><!-- /page -->
+
+	<div data-role="page" id="TheSoupHouse">
+
+		<div role="main" class="ui-content">
+			
+		</div><!-- /content -->
 
 	</div><!-- /page -->
 
@@ -85,67 +62,79 @@
 
 		<h2>Acknoledgements</h2>
 
-		<p>This application was written as an experiment into what can be done with PhoneGap.  I wrote it using HTML, jQuery Mobile, and PhoneGap Build.</p>
-
+		<p>This application was writen by Joe Steinbring, using PhoneGap Build and Kimono.  The source code for this app is available via http://steinbring.net.</p>
+		<p>Would you like to get your restaurant's daily soup selection added to or removed from this application? Email <a href="mailto:joe@steinbring.net">joe@steinbring.net</a>.</p>
+		<p>The soup bowl image on this app is courtesy of Charles Haynes (haynes), on flickr.</p>
 		</div><!-- /content -->
-
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar" class="footer">
-				&copy; Joe Steinbring
-			</div>
-		</div><!-- /header -->
-
-	</div><!-- /page -->
-
-	<div data-role="page" data-dialog="true" id="stark">
-
-		<div data-role="header" data-theme="b">
-		<h1>Starkmedia</h1>
-		</div>
-
-		<div role="main" class="ui-content">
-		<h1>Starkmedia</h1>
-		<p>Starkmedia, located in the heart of Milwaukee's Historic Third Ward, is a web development shop that has been serving a wide variety of clients since its founding in 1996.</p>
-			<a href="http://starkmedia.com" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Website</a>
-			<a href="tel:414-226-2710" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Phone</a>
-			<a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
-		</div>
 
 	</div><!-- /page -->
 
 	<div data-role="panel" id="outside" data-theme="b">
+		<!-- The sidebar nav thing -->
 		<ul data-role="listview">
 			<li data-icon="back"><a href="#" data-rel="close">Close</a></li>
-			<li><a href="#about">About Joe</a></li>
-			<li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
+			<li><a href="#BellaThird" onclick="getBellaThird();">Bella Caffe - Third Ward</a></li>
+			<li><a href="#TheSoupHouse" onclick="getTheSoupHouse();">The Soup House</a></li>
 			<li><a href="#acknoledgements">Acknoledgements</a>
 		</ul>
 	</div>
 
 	<script type="text/javascript">
-	  function getRSSFeed(feed,list){
-		// Build the YQL query
-		var qryRSS = 'select * from rss where url='+'"'+feed+'"';
-		// Initiate the YQL query
-		$.getJSON("http://query.yahooapis.com/v1/public/yql",
-		  {
-		    // These are the settings for your API call
-		    q: qryRSS,
-		    format: "json"
-		  },
+		// Bella Caffe - Third Ward
+		function getBellaThird(){
+			// Empty the UI and recreate the table
+			$("#BellaThird .ui-content").empty();
+			$("#BellaThird .ui-content").append('<table class="soup"></table>');
+			// Get the data for Bella
+			$.ajax({
+				"url":"http://www.kimonolabs.com/api/49dynsay?apikey=495a5101a00dfd6ca91e247ccab74968&callback=kimonoBTCallback",
+				"crossDomain":true,
+				"dataType":"jsonp"
+			});
+		};
 
-		  // Take the data you got from the YQL server and output it to the screen.  The variable "data" holds the JSON you got back from the YQL server.
-		  function(data) {
-		  	$('#'+list).empty();
-		    // Just bother with the last 10 entries within the JSON feed
-		    for (i=0; i<10; i++)
-		      {
-		      // Output the blog posts
-		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description.replace('more-link block-button','ui-btn ui-shadow ui-corner-all ui-btn-a ui-link" target="_system')+'</p></div>';
-        	  $('#'+list).append( content ).collapsibleset( "refresh" );
-		    }
-		});
-	  };
-	</script>
+		function kimonoBTCallback(data) {
+			// Loop through data and populate the table
+			for (i=0; i<data.results.collection1.length; i++){
+				$("#BellaThird .ui-content .soup").append('<tr class="StartSoup"><td>'+data.results.collection1[i].Title+'</td><td>'+data.results.collection1[i].Price.replace('Bowl','&nbsp;Bowl')+'</td></tr>');
+				$("#BellaThird .ui-content .soup").append('<tr class="EndSoup"><td colspan="2">'+data.results.collection1[i].Ingredients+'</td></tr>');
+			}
+		}
+
+		function kimonoTSHCallback(data) {
+			// Add the header text
+			$("#TheSoupHouse .Monday").append('<tr><th>Monday</th></tr>');
+			$("#TheSoupHouse .Tuesday").append('<tr><th>Tuesday</th></tr>');
+			$("#TheSoupHouse .Wednesday").append('<tr><th>Wednesday</th></tr>');
+			$("#TheSoupHouse .Thursday").append('<tr><th>Thursday</th></tr>');
+			$("#TheSoupHouse .Friday").append('<tr><th>Friday</th></tr>');
+			// Loop through data and populate the table
+			for (i=0; i<data.results.collection1.length; i++){
+				if(data.results.collection1[i].Monday!='*Vegetarian **Vegan')
+					$("#TheSoupHouse .Monday").append('<tr><td>'+data.results.collection1[i].Monday+'</td></tr>');
+				if(data.results.collection1[i].Tuesday!='*Vegetarian **Vegan')
+					$("#TheSoupHouse .Tuesday").append('<tr><td>'+data.results.collection1[i].Tuesday+'</td></tr>');
+				if(data.results.collection1[i].Wednesday!='*Vegetarian **Vegan')
+					$("#TheSoupHouse .Wednesday").append('<tr><td>'+data.results.collection1[i].Wednesday+'</td></tr>');
+				if(data.results.collection1[i].Thursday!='*Vegetarian **Vegan')
+					$("#TheSoupHouse .Thursday").append('<tr><td>'+data.results.collection1[i].Thursday+'</td></tr>');
+				if(data.results.collection1[i].Friday!='*Vegetarian **Vegan')
+					$("#TheSoupHouse .Friday").append('<tr><td>'+data.results.collection1[i].Friday+'</td></tr>');
+			}
+		}
+
+		function getTheSoupHouse(){
+			// Empty the div
+			$("#TheSoupHouse .ui-content").empty();
+			// (Re)Create the table
+			$("#TheSoupHouse .ui-content").append('<table class="soup"><tr class="Monday"></tr><tr class="Tuesday"></tr><tr class="Wednesday"></tr><tr class="Thursday"></tr><tr class="Friday"></tr></table>');
+			// Get the data and throw it at kimonoTSHCallback()
+			$.ajax({
+				"url":"http://www.kimonolabs.com/api/9izwfx5i?apikey=495a5101a00dfd6ca91e247ccab74968&callback=kimonoTSHCallback",
+				"crossDomain":true,
+				"dataType":"jsonp"
+			});
+		};
+	</script> 
 </body>
 </html>
