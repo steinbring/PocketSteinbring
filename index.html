@@ -1,151 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Pocket Joe</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.mobile-1.4.0.min.js"></script>
-	<script>
-		$( document ).on( "pagecreate", function() {
-			$( "body > [data-role='panel']" ).panel();
-			$( "body > [data-role='panel'] [data-role='listview']" ).listview();
-		});
-		$( document ).one( "pageshow", function() {
-			$( "body > [data-role='header']" ).toolbar();
-			$( "body > [data-role='header'] [data-role='navbar']" ).navbar();
-		});
-	</script>
+    <meta charset="utf-8">
+    <title>Pocket Joe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.0.min.js"></script>
+    <script>
+        $( document ).on( "pagecreate", function() {
+            $( "body > [data-role='panel']" ).panel();
+            $( "body > [data-role='panel'] [data-role='listview']" ).listview();
+        });
+        $( document ).one( "pageshow", function() {
+            $( "body > [data-role='header']" ).toolbar();
+            $( "body > [data-role='header'] [data-role='navbar']" ).navbar();
+        });
+    </script>
 </head>
 <body>
 
-	<div data-role="header" data-position="fixed" data-theme="a">
-		<h1>Pocket Joe</h1>
-		<a href="#outside" data-icon="bars" data-iconpos="notext">Menu</a>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#about">About Joe</a></li>
-				<li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
-			</ul>
-		</div>
-	</div><!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="a">
+        <h1>Pocket Joe</h1>
+        <a href="#outside" data-icon="bars" data-iconpos="notext">Menu</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about">About Joe</a></li>
+                <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
+            </ul>
+        </div>
+    </div><!-- /header -->
 
-	<div data-role="page" id="about">
+    <div data-role="page" id="about">
 
-		<div role="main" class="ui-content">
+        <div role="main" class="ui-content">
 
-		<div style="text-align:center;"><img src="img/FlipFace-Joe.jpg" style="width:90%;"></div>
+        <div style="text-align:center;"><img src="img/FlipFace-Joe.jpg" style="width:90%;"></div>
 
-		<p>
-			So, who is Joe Steinbring? I currently live in Glendale, Wisconsin (a suburb of Milwaukee) and I work as an application developer at <a href="#stark" data-transition="pop">Starkmedia</a>.
-		</p>
-			I enjoy trap shooting, archery, and photography. If I am not experimenting with code, I am usually outdoors. I am a former employee of Philmont Scout Ranch and have always been fond of the outdoors.
-		</p>
-		<p>
-			I graduated in 2006 from UW-Milwaukee’s Lubar School of Business Administration with a BBA. In the spring of 2012, I graduated from Cardinal Stritch University’s College of Business Administration with an MBA.
-		</p>
-		<p style="text-align:center;">
-		<a href="https://twitter.com/steinbring" target="_new"><img src="img/twitter.png" style="margin-right:20px;"></a>
-		<a href="https://www.linkedin.com/in/steinbring" target="_new"><img src="img/linkedin.png" style="margin-right:20px;"></a>
-		<a href="https://google.com/+JoeSteinbring" target="_new"><img src="img/google-plus.png"></a>
-		</p>
+        <p>
+            So, who is Joe Steinbring? I currently live in Glendale, Wisconsin (a suburb of Milwaukee) and I work as an application developer at <a href="#stark" data-transition="pop">Starkmedia</a>.
+        </p>
+            I enjoy trap shooting, archery, and photography. If I am not experimenting with code, I am usually outdoors. I am a former employee of Philmont Scout Ranch and have always been fond of the outdoors.
+        </p>
+        <p>
+            I graduated in 2006 from UW-Milwaukee’s Lubar School of Business Administration with a BBA. In the spring of 2012, I graduated from Cardinal Stritch University’s College of Business Administration with an MBA.
+        </p>
+        <p style="text-align:center;">
+        <a href="https://twitter.com/steinbring" target="_new"><img src="img/twitter.png" style="margin-right:20px;"></a>
+        <a href="https://www.linkedin.com/in/steinbring" target="_new"><img src="img/linkedin.png" style="margin-right:20px;"></a>
+        <a href="https://google.com/+JoeSteinbring" target="_new"><img src="img/google-plus.png"></a>
+        </p>
 
-		</div><!-- /content -->
+        </div><!-- /content -->
 
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar" class="footer">
-				&copy; Joe Steinbring
-			</div>
-		</div><!-- /header -->
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" class="footer">
+                &copy; Joe Steinbring
+            </div>
+        </div><!-- /header -->
 
-	</div><!-- /page -->
+    </div><!-- /page -->
 
-	<div data-role="page" id="blog">
+    <div data-role="page" id="blog">
 
-		<div role="main" class="ui-content">
+        <div role="main" class="ui-content">
 
-			<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="BlogList">
-				Loading ...
-			</div>
-		</div><!-- /content -->
+            <div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="BlogList">
+                Loading ...
+            </div>
+        </div><!-- /content -->
 
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar" class="footer">
-				&copy; Joe Steinbring
-			</div>
-		</div><!-- /header -->
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" class="footer">
+                &copy; Joe Steinbring
+            </div>
+        </div><!-- /header -->
 
-	</div><!-- /page -->
+    </div><!-- /page -->
 
-	<div data-role="page" id="acknoledgements">
+    <div data-role="page" id="acknoledgements">
 
-		<div role="main" class="ui-content">
+        <div role="main" class="ui-content">
 
-		<h2>Acknoledgements</h2>
+        <h2>Acknowledgments</h2>
 
-		<p>This application was written as an experiment into what can be done with PhoneGap.  I wrote it using HTML, jQuery Mobile, and PhoneGap Build.</p>
+        <p>This application was written as an experiment into what can be done with PhoneGap.  I wrote it using HTML, jQuery Mobile, and PhoneGap Build.</p>
 
-		</div><!-- /content -->
+        </div><!-- /content -->
 
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar" class="footer">
-				&copy; Joe Steinbring
-			</div>
-		</div><!-- /header -->
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" class="footer">
+                &copy; Joe Steinbring
+            </div>
+        </div><!-- /header -->
 
-	</div><!-- /page -->
+    </div><!-- /page -->
 
-	<div data-role="page" data-dialog="true" id="stark">
+    <div data-role="page" data-dialog="true" id="stark">
 
-		<div data-role="header" data-theme="b">
-		<h1>Starkmedia</h1>
-		</div>
+        <div data-role="header" data-theme="b">
+        <h1>Starkmedia</h1>
+        </div>
 
-		<div role="main" class="ui-content">
-		<h1>Starkmedia</h1>
-		<p>Starkmedia, located in the heart of Milwaukee's Historic Third Ward, is a web development shop that has been serving a wide variety of clients since its founding in 1996.</p>
-			<a href="http://starkmedia.com" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Website</a>
-			<a href="tel:414-226-2710" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Phone</a>
-			<a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
-		</div>
+        <div role="main" class="ui-content">
+        <h1>Starkmedia</h1>
+        <p>Starkmedia, located in the heart of Milwaukee's Historic Third Ward, is a web development shop that has been serving a wide variety of clients since its founding in 1996.</p>
+            <a href="http://starkmedia.com" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Website</a>
+            <a href="tel:414-226-2710" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Phone</a>
+            <a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
+        </div>
 
-	</div><!-- /page -->
+    </div><!-- /page -->
 
-	<div data-role="panel" id="outside" data-theme="b">
-		<ul data-role="listview">
-			<li data-icon="back"><a href="#" data-rel="close">Close</a></li>
-			<li><a href="#about">About Joe</a></li>
-			<li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
-			<li><a href="#acknoledgements">Acknoledgements</a>
-		</ul>
-	</div>
+    <div data-role="panel" id="outside" data-theme="b">
+        <ul data-role="listview">
+            <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
+            <li><a href="#about">About Joe</a></li>
+            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
+            <li><a href="#acknoledgements">Acknowledgments</a>
+        </ul>
+    </div>
 
-	<script type="text/javascript">
-	  function getRSSFeed(feed,list){
-		// Build the YQL query
-		var qryRSS = 'select * from rss where url='+'"'+feed+'"';
-		// Initiate the YQL query
-		$.getJSON("http://query.yahooapis.com/v1/public/yql",
-		  {
-		    // These are the settings for your API call
-		    q: qryRSS,
-		    format: "json"
-		  },
+    <script type="text/javascript">
+      function getRSSFeed(feed,list){
+        // Build the YQL query
+        var qryRSS = 'select * from rss where url='+'"'+feed+'"';
+        // Initiate the YQL query
+        $.getJSON("http://query.yahooapis.com/v1/public/yql",
+          {
+            // These are the settings for your API call
+            q: qryRSS,
+            format: "json"
+          },
 
-		  // Take the data you got from the YQL server and output it to the screen.  The variable "data" holds the JSON you got back from the YQL server.
-		  function(data) {
-		  	$('#'+list).empty();
-		    // Just bother with the last 10 entries within the JSON feed
-		    for (i=0; i<10; i++)
-		      {
-		      // Output the blog posts
-		      var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].encoded+'</p></div>';
-        	  $('#'+list).append( content ).collapsibleset( "refresh" );
-		    }
-		});
-	  };
-	</script>
+          // Take the data you got from the YQL server and output it to the screen.  The variable "data" holds the JSON you got back from the YQL server.
+          function(data) {
+            $('#'+list).empty();
+            // Just bother with the last 10 entries within the JSON feed
+            for (i=0; i<10; i++)
+              {
+              // Output the blog posts
+              var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].encoded+'</p></div>';
+              $('#'+list).append( content ).collapsibleset( "refresh" );
+            }
+        });
+      };
+    </script>
 </body>
 </html>
