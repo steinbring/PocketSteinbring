@@ -2,7 +2,7 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "net.steinbring.PocketJoe"
-        versionCode = "10" 
+        versionCode = "20" 
         version     = "0.02" >
 
     <!-- versionCode is optional and Android only -->
