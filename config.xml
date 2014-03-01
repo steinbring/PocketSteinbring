@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "net.steinbring.PocketJoe"
-        versionCode = "20" 
-        version     = "0.02" >
+        versionCode = "50" 
+        version     = "0.05" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -19,7 +19,6 @@
 
     <preference name="phonegap-version" value="3.1.0" />
     
-    <access origin="http://steinbring.net" subdomains="true" />
     <access origin="http://platform.twitter.com" subdomains="true" />
     <access origin="http://cdn.syndication.twimg.com" subdomains="true" />
     <access origin="http://pbs.twimg.com" subdomains="true" />
