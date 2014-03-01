@@ -34,3 +34,6 @@
 .project .alt {
 	text-align: right;
 }
+.hidebullets {
+	list-style-type: none;
+}
