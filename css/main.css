@@ -1,15 +1,18 @@
 .footer {
 	text-align: center;
 }
+.project {
+	margin-bottom: 40px;
+}
 .project img {
 	width:100%;
-	opacity:0.7;
+	opacity:0.8;
 }
 .project .description {
 	width:100%;
 	background-color:#ffffff;
-	opacity:0.8;
-	margin-top:-90px;
+	opacity:0.9;
+	margin-top:-100px;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -24,6 +27,9 @@
 	opacity: 1;
 	font-weight: bolder;
 	width:92%;
+}
+.project .description a {
+	text-decoration: none;
 }
 .project .alt {
 	text-align: right;
