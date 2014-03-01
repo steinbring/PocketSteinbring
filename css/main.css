@@ -4,13 +4,12 @@
 .project img {
 	width:100%;
 	opacity:0.7;
-	margin-bottom: 40px;
 }
 .project .description {
 	width:100%;
 	background-color:#ffffff;
 	opacity:0.8;
-	margin-top:-110px;
+	margin-top:-90px;
 	padding: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
