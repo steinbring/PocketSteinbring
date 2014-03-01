@@ -27,6 +27,7 @@
         <div data-role="navbar">
             <ul>
                 <li><a href="#about">About Joe</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
             </ul>
         </div>
@@ -79,6 +80,33 @@
 
     </div><!-- /page -->
 
+    <div data-role="page" id="projects">
+
+        <div role="main" class="ui-content">
+            <div class="project">
+                <img src="img/steinbring.net.png">
+                <div class="description">
+                    <h1><a href="http://steinbring.net">STEINBRING.net</a></h1>
+                    <p>Role: Owner / Blogger</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="img/redarrowusa.com.png">
+                <div class="description alt">
+                    <h1><a href="http://redarrowusa.com">Red Arrow USA</a></h1>
+                    <p>Role: Full-Stack Developer</p>
+                </div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" class="footer">
+                &copy; Joe Steinbring
+            </div>
+        </div><!-- /header -->
+
+    </div><!-- /page -->
+
     <div data-role="page" id="acknoledgements">
 
         <div role="main" class="ui-content">
@@ -117,6 +145,7 @@
         <ul data-role="listview">
             <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
             <li><a href="#about">About Joe</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
             <li><a href="#acknoledgements">Acknowledgments</a>
         </ul>
