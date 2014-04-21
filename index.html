@@ -17,6 +17,16 @@
             $( "body > [data-role='header']" ).toolbar();
             $( "body > [data-role='header'] [data-role='navbar']" ).navbar();
         });
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            navigator.splashscreen.show();
+        }
+
     </script>
 </head>
 <body>
