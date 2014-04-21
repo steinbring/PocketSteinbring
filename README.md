@@ -4,6 +4,7 @@ PocketJoe
 I created this app as a platform for learning phonegap.
 
 Google Play Store: https://play.google.com/store/apps/details?id=net.steinbring.PocketJoe
+
 PhoneGap Build: https://build.phonegap.com/apps/750616
 
 2014-03-01: I added a "Projects" section, built out the content for the "About" section, and tweaked the "Blog" section.
