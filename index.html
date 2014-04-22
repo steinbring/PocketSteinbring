@@ -17,15 +17,6 @@
             $( "body > [data-role='header']" ).toolbar();
             $( "body > [data-role='header'] [data-role='navbar']" ).navbar();
         });
-        // Wait for Cordova to load
-        //
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        // Cordova is ready
-        //
-        function onDeviceReady() {
-            navigator.splashscreen.show();
-        }
 
     </script>
 </head>
@@ -241,7 +232,6 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#acknoledgements">Acknowledgments</a>
             <li>Blog</li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">All Categories</a></li>
             <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/coding/feed/','BlogList');">Coding</a></li>
             <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/mba/feed/','BlogList');">MBA</a></li>
             <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/miscellanea/feed/','BlogList');">Miscellanea</a></li>
@@ -267,8 +257,7 @@
           // Take the data you got from the YQL server and output it to the screen.  The variable "data" holds the JSON you got back from the YQL server.
           function(data) {
             $('#'+list).empty();
-            // Just bother with the last 10 entries within the JSON feed
-            for (i=0; i<10; i++)
+            for (i=0; i<data.query.results.item.length; i++)
               {
               // Output the blog posts
               var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description+'</p></div>';
