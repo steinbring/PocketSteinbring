@@ -1,270 +1,104 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Pocket Joe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.mobile-1.4.0.min.js"></script>
-    <script>
-        $( document ).on( "pagecreate", function() {
-            $( "body > [data-role='panel']" ).panel();
-            $( "body > [data-role='panel'] [data-role='listview']" ).listview();
-        });
-        $( document ).one( "pageshow", function() {
-            $( "body > [data-role='header']" ).toolbar();
-            $( "body > [data-role='header'] [data-role='navbar']" ).navbar();
-        });
-
-    </script>
-</head>
-<body>
-
-    <div data-role="header" data-position="fixed" data-theme="a">
-        <h1>Pocket Joe</h1>
-        <a href="#outside" data-icon="bars" data-iconpos="notext">Menu</a>
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#about">About Joe</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/feed/','BlogList');">Blog</a></li>
-            </ul>
-        </div>
-    </div><!-- /header -->
-
-    <div data-role="page" id="about">
-
-        <div role="main" class="ui-content">
-
-        <div style="text-align:center;"><img src="img/FlipFace-Joe.jpg" style="width:90%;"></div>
-
-        <h2>Who is Joe Steinbring?</h2>
-        <p>
-        I am an application developer with more than six years of experience within public and private sector organizations. I have worked on domestic and international projects for organizations such as the Kohler Company, the University of Wisconsin - Milwaukee, Ann Sacks, the Mandel Group, Artisan Partners, and Red Arrow USA. I possess an advanced skill-set that is allows me to create maintainable, holistic business solutions.
-        </p>
-        <h2>Vital Statistics</h2>
-        <ul>
-            <li class="hidebullets">Technologies Previously Leveraged</li>
-            <li class="hidebullets">
-                <ul>
-                    <li>
-                        <a href="http://steinbring.net/tag/coldfusion/" target="_new">ColdFusion</a>
-                    </li>
-                    <li>Railo</li>
-                    <li><a href="http://steinbring.net/tag/javascript/" target="_new">JavaScript</a></li>
-                    <li>jQuery</li>
-                    <li><a href="http://steinbring.net/tag/phonegap/" target="_new">PhoneGap</a></li>
-                    <li>MySQL</li>
-                    <li>MS SQL</li>
-                    <li>Oracle RDBMS</li>
-                </ul>
-            </li>
-            <li class="hidebullets">Past/Present Roles</li>
-            <li class="hidebullets">
-                <ul>
-                    <li>Senior Application Developer at <a class="ui-link" data-transition="pop" href="#stark">Starkmedia</a></li>
-                    <li>ColdFusion Developer at Kohler Company</li>
-                    <li>Senior Web Application Developer at UW-Milwaukee</li>
-                </ul>
-            </li>
-            <li class="hidebullets">Degrees</li>
-            <li class="hidebullets">
-                <ul>
-                    <li>MBA from Cardinal Stritch University</li>
-                    <li>BBA from University of Wisconsin, Milwaukee</li>
-                </ul>
-            </li>
-        </ul>
-        
-        <p style="text-align:center;">
-        <a href="https://twitter.com/steinbring" target="_new"><img src="img/twitter.png" style="margin-right:20px;"></a>
-        <a href="https://www.linkedin.com/in/steinbring" target="_new"><img src="img/linkedin.png" style="margin-right:20px;"></a>
-        <a href="https://google.com/+JoeSteinbring" target="_new"><img src="img/google-plus.png"></a>
-        </p>
-
-        </div><!-- /content -->
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar" class="footer">
-                &copy; Joe Steinbring
-            </div>
-        </div><!-- /header -->
-
-    </div><!-- /page -->
-
-    <div data-role="page" id="blog">
-
-        <div role="main" class="ui-content">
-
-            <div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="BlogList">
-                Loading ...
-            </div>
-        </div><!-- /content -->
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar" class="footer">
-                &copy; Joe Steinbring
-            </div>
-        </div><!-- /header -->
-
-    </div><!-- /page -->
-
-    <div data-role="page" id="projects">
-
-        <div role="main" class="ui-content">
-            <div class="project">
-                <img src="img/steinbring.net.png">
-                <div class="description">
-                    <h1><a href="#steinbring.net" data-transition="pop">STEINBRING.net</a></h1>
-                    <p>Role: Owner / Blogger</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="img/redarrowusa.com.png">
-                <div class="description">
-                    <h1><a href="#redarrowusa.com" data-transition="pop">Red Arrow USA</a></h1>
-                    <p>Role: Full-Stack Developer</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="img/ArtisanPartnersGlobal.com.png">
-                <div class="description">
-                    <h1><a href="#ArtisanPartnersGlobal.com" data-transition="pop">Artisan Partners Global</a></h1>
-                    <p>Role: Full-Stack Developer</p>
-                </div>
-            </div>
-        </div><!-- /content -->
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar" class="footer">
-                &copy; Joe Steinbring
-            </div>
-        </div><!-- /header -->
-
-    </div><!-- /page -->
-
-    <div data-role="page" id="acknoledgements">
-
-        <div role="main" class="ui-content">
-
-        <h2>Acknowledgments</h2>
-
-        <p>This application was written as an experiment into what can be done with PhoneGap.  I wrote it using HTML, jQuery Mobile, and PhoneGap Build.</p>
-
-        </div><!-- /content -->
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar" class="footer">
-                &copy; Joe Steinbring
-            </div>
-        </div><!-- /header -->
-
-    </div><!-- /page -->
-
-    <div data-role="page" data-dialog="true" id="stark">
-
-        <div data-role="header" data-theme="b">
-        <h1>Starkmedia</h1>
-        </div>
-
-        <div role="main" class="ui-content">
-        <h1>Starkmedia</h1>
-        <p>Starkmedia, located in the heart of Milwaukee's Historic Third Ward, is a web development shop that has been serving a wide variety of clients since its founding in 1996.</p>
-            <a href="http://starkmedia.com" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Website</a>
-            <a href="tel:414-226-2710" target="_system" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Phone</a>
-            <a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
-        </div>
-
-    </div><!-- /page -->
-
-    <div data-role="page" data-dialog="true" id="steinbring.net">
-
-        <div data-role="header" data-theme="b">
-        <h1>STEINBRING.net</h1>
-        </div>
-
-        <div role="main" class="ui-content">
-        <h1>STEINBRING.net</h1>
-        <p>This is my personal blog.  If I blog about my professional or personal experiments, I will do so here.  This site runs on a wordpress instance that I keep on my personal Ubuntu-based VPS.</p>
-            <a href="http://steinbring.net" target="_new" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Visit Site</a>
-            <a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
-        </div>
-
-    </div><!-- /page -->
-
-    <div data-role="page" data-dialog="true" id="redarrowusa.com">
-
-        <div data-role="header" data-theme="b">
-        <h1>Red Arrow USA</h1>
-        </div>
-
-        <div role="main" class="ui-content">
-        <h1>Red Arrow USA</h1>
-        <p>This site was visually designed by a third party, but my team was brought in to wire it up.  I created content updaters and wired them up to front-end pages.  I wrote this using ColdFusion 10 ORM, running on a Linux/Apache/MS SQL stack.  While I was not involved in the visual design, I am very proud of this.</p>
-            <a href="http://redarrowusa.com" target="_new" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Visit Site</a>
-            <a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
-        </div>
-
-    </div><!-- /page -->
-
-    <div data-role="page" data-dialog="true" id="ArtisanPartnersGlobal.com">
-
-        <div data-role="header" data-theme="b">
-        <h1>Artisan Partners Global</h1>
-        </div>
-
-        <div role="main" class="ui-content">
-        <h1>Artisan Partners Global</h1>
-        <p>In June 2012, I joined the team at Starkmedia and took over maintenance and development for all websites belonging to Artisan Partners.  There has been no green-field development involved with this account (as of the writing of this) but I have rewrote most of APG, over the past 2 years.</p>
-        <p>All Artisan Partners sites are on a Linux/Apache/MS SQL/ColdFusion 10 stack.</p>
-            <a href="http://www.ArtisanPartnersGlobal.com" target="_new" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Visit Site</a>
-            <a href="dialog/index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
-        </div>
-
-    </div><!-- /page -->
-
-    <div data-role="panel" id="outside" data-theme="b">
-        <ul data-role="listview">
-            <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
-            <li><a href="#about">About Joe</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#acknoledgements">Acknowledgments</a>
-            <li>Blog</li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/coding/feed/','BlogList');">Coding</a></li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/mba/feed/','BlogList');">MBA</a></li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/miscellanea/feed/','BlogList');">Miscellanea</a></li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/movies/feed/','BlogList');">Movies</a></li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/photography/feed/','BlogList');">Photography</a></li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/security/feed/','BlogList');">Security</a></li>
-            <li><a href="#blog" onclick="getRSSFeed('http://steinbring.net/category/software/feed/','BlogList');">Software</a></li>
-        </ul>
-    </div>
-
-    <script type="text/javascript">
-      function getRSSFeed(feed,list){
-        // Build the YQL query
-        var qryRSS = 'select * from rss where url='+'"'+feed+'"';
-        // Initiate the YQL query
-        $.getJSON("http://query.yahooapis.com/v1/public/yql",
-          {
-            // These are the settings for your API call
-            q: qryRSS,
-            format: "json"
-          },
-
-          // Take the data you got from the YQL server and output it to the screen.  The variable "data" holds the JSON you got back from the YQL server.
-          function(data) {
-            $('#'+list).empty();
-            for (i=0; i<data.query.results.item.length; i++)
-              {
-              // Output the blog posts
-              var content = '<div data-role="collapsible"><h3>'+data.query.results.item[i].title+'</h3><p>'+data.query.results.item[i].description+'</p></div>';
-              $('#'+list).append( content ).collapsibleset( "refresh" );
-            }
-        });
-      };
-    </script>
-</body>
+<html id="data">
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<!-- Bootstrap -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+		<title>{data.mainDetails.name}: {data.mainDetails.description}</title>
+	</head>
+	<body>
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand" onclick="toggle('home');">{data.mainDetails.name}</a>
+			  </div>
+			  <div id="navbar" class="navbar-collapse collapse">
+			    <ul class="nav navbar-nav">
+			      <li class="dropdown" rv-class-active="data.selected | eq 'blog'">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li rv-each-post="data.posts" rv-class-active="data.currentPost.slug | eq post.slug"><a onclick="toggle('blog');toggleBlog(this.value);" rv-value="post.slug">{post.title}</a></li>
+			        </ul>
+			      </li>
+			      <li rv-class-active="data.selected | eq 'about'"><a onclick="toggle('about');">About Joe</a></li>
+			      <li rv-class-active="data.selected | eq 'projects'"><a onclick="toggle('projects');">Projects</a></li>
+			      <li rv-class-active="data.selected | eq 'resume'"><a onclick="toggle('resume');">Resume</a></li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right" id="twitterLink">
+			      <li><a data-toggle="modal" data-target="#twitter">Twitter</a></li>
+			    </ul>
+			  </div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+		<div id="home" class="container" rv-show="data.selected | eq 'home'">
+			<!-- Show "adverts" for each post -->
+			<div class="row">
+			  <div class="col-sm-6 col-md-4" rv-each-post="data.posts">
+			    <div class="thumbnail">
+			      <img rv-src="post.featured_image.source" rv-alt="post.featured_image.title">
+			      <div class="caption">
+			        <h3 rv-text="post.title"></h3>
+			        <div class="excerpt" rv-html="post.excerpt"></div>
+			        <p><a href="#" class="btn btn-primary" role="button" onclick="toggle('blog');toggleBlog(this.value);" rv-value="post.slug">Read More ...</a>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<div id="blog" class="container" rv-show="data.selected | eq 'blog'">
+			<div id="currentPost">
+				<div class="page-header">
+					<h1 rv-text="data.currentPost.title"></h1>
+				</div>
+				<h2>{data.currentPost.date}</h2>
+				<div rv-html="data.currentPost.content"></div>
+			</div>
+		</div>
+		<div id="resume" class="container" rv-show="data.selected | eq 'resume'">
+			<div class="page-header">
+				<h1 rv-text="data.pages.resume.title"></h1>
+			</div>
+			<div rv-html="data.pages.resume.content"></div>
+		</div>
+		<div id="about" class="container" rv-show="data.selected | eq 'about'">
+			<div class="page-header">
+				<h1 rv-text="data.pages.about.title"></h1>
+			</div>
+			<div rv-html="data.pages.about.content"></div>
+		</div>
+		<div id="projects" class="container" rv-show="data.selected | eq 'projects'">
+			<div class="page-header">
+				<h1 rv-text="data.pages.projects.title"></h1>
+			</div>
+			<div rv-html="data.pages.projects.content"></div>
+		</div>
+		<div id="twitter" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-md">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Twitter</h4>
+					</div>
+					<div class="modal-body">
+						<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/steinbring" data-widget-id="703371328125083648">Tweets by @steinbring</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="/js/rivets.bundled.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	</script>
 </html>

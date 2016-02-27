@@ -1,39 +1,11 @@
-.footer {
+/*Remove the 'more' tag from the digests*/
+.moretag{
+	display: none;
+}
+/*Remove the 'tweet' buttons */
+.twitter-share-button{
+	display: none;
+}
+#twitter{
 	text-align: center;
-}
-.project {
-	margin-bottom: 40px;
-}
-.project img {
-	width:100%;
-	opacity:0.8;
-}
-.project .description {
-	width:100%;
-	background-color:#ffffff;
-	opacity:0.9;
-	margin-top:-100px;
-	padding: 2px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.project .description p {
-	opacity: 1;
-	font-weight: bold;
-	margin-top: -25px;
-	width:92%;
-}
-.project .description h1 {
-	opacity: 1;
-	font-weight: bolder;
-	width:92%;
-}
-.project .description a {
-	text-decoration: none;
-}
-.project .alt {
-	text-align: right;
-}
-.hidebullets {
-	list-style-type: none;
 }
