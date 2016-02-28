@@ -4,6 +4,8 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<!-- Bootstrap -->
     	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/bootstrap-material-design.min.css" rel="stylesheet">
+    	<link href="css/ripples.min.css" rel="stylesheet">
 		<title>{data.mainDetails.name}: {data.mainDetails.description}</title>
 	</head>
 	<body>
@@ -113,16 +115,16 @@
 								  <div class="btn-group" role="group">
 								    <button type="button" class="btn btn-default" onclick="getMainDetails();getPages();getPosts();">Refresh Cached Data</button>
 								  </div>
-								  <div class="btn-group" role="group">
+								  <!-- <div class="btn-group" role="group">
 									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Themes <span class="caret"></span>
 									</button>
 									<ul class="dropdown-menu">
-										<li><a href="#">Theme 1</a></li>
+										<li><a href="#" onclick="$.material.init();">Material Design</a></li>
 										<li><a href="#">Theme 2</a></li>
 										<li><a href="#">Theme 3</a></li>
 									</ul>
-								  </div>
+								  </div> -->
 								</div>
 							</div>
 						</div>
@@ -141,7 +143,11 @@
 	<script type="text/javascript" src="js/rivets.bundled.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/material.min.js"></script>
+	<script type="text/javascript" src="js/ripples.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">$.material.init();</script>
+	
 	<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 	</script>
