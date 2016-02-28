@@ -6,6 +6,6 @@
 .twitter-share-button{
 	display: none;
 }
-#twitter{
+#twitter .modal-body{
 	text-align: center;
 }

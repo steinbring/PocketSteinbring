@@ -80,9 +80,13 @@ var getPosts = function(){
 }
 
 var getOldValues = function(){
-  data.pages = JSON.parse(localStorage.getItem("pages"));
-  data.posts = JSON.parse(localStorage.getItem("posts"));
-  data.mainDetails = JSON.parse(localStorage.getItem("mainDetails"));
+  // Only set the values if there is something there to set
+  if('null' != JSON.parse(localStorage.getItem("pages")))
+    data.pages = JSON.parse(localStorage.getItem("pages"));
+  if('null' != JSON.parse(localStorage.getItem("posts")))
+    data.posts = JSON.parse(localStorage.getItem("posts"));
+  if('null' != JSON.parse(localStorage.getItem("mainDetails")))
+    data.mainDetails = JSON.parse(localStorage.getItem("mainDetails"));
 }
 
 // Out of the box, Rivets.js can't do comparisons. This gives you a way.
