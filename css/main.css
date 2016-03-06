@@ -9,3 +9,11 @@
 #twitter .modal-body{
 	text-align: center;
 }
+/*For the "About Joe" page*/
+#about img{
+	float: left;
+	margin-right: 12px;
+}
+#about p{
+	float: right;
+}
