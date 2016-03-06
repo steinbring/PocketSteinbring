@@ -81,11 +81,11 @@ var getPosts = function(){
 
 var getOldValues = function(){
   // Only set the values if there is something there to set
-  if('null' != JSON.parse(localStorage.getItem("pages")))
+  if(localStorage.getItem("pages") != null)
     data.pages = JSON.parse(localStorage.getItem("pages"));
-  if('null' != JSON.parse(localStorage.getItem("posts")))
+  if(localStorage.getItem("posts") != null)
     data.posts = JSON.parse(localStorage.getItem("posts"));
-  if('null' != JSON.parse(localStorage.getItem("mainDetails")))
+  if(localStorage.getItem("mainDetails") != null)
     data.mainDetails = JSON.parse(localStorage.getItem("mainDetails"));
 }
 
