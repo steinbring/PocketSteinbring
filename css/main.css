@@ -17,3 +17,37 @@
 #about p{
 	float: right;
 }
+/*For the "Resume" page*/
+h2[itemprop="name"]{
+	float: left;
+}
+header.vcard ul{
+	float: right;
+}
+#experience{
+	clear: both;
+}
+section#experience header{
+	font-size: 16px;
+	text-align: center;
+}
+#experience article header{
+	font-size: 14px;
+	text-align: left;
+}
+#experience article header [itemprop="name"]{
+	float:left;
+}
+#experience article header [itemprop="location"]{
+	float:left;
+	padding-left: 10px;
+}
+#experience article header [itemprop="location"]::before{
+	content: "(";
+}
+#experience article header [itemprop="location"]::after{
+	content: ")";
+}
+#experience article section{
+	clear: both;
+}
