@@ -119,6 +119,33 @@ else{
   document.getElementById('twitterLink').style.display = 'none';
 }
 
+var longFormatDate = function(date){
+  var monthNames = [
+    "January", 
+    "February", 
+    "March",
+    "April", 
+    "May", 
+    "June", 
+    "July",
+    "August", 
+    "September", 
+    "October",
+    "November", 
+    "December"
+  ];
+
+  var date = new Date(date);
+  var day = date.getDate();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+  return monthNames[monthIndex] + ' ' + day+ ', ' + year
+}
+
+rivets.formatters.longDate = function(value) {
+  return longFormatDate(value);
+};
+
 // Bind the data to part of the DOM
 var el = document.getElementById('data');
 rivets.bind(el, {data: data});

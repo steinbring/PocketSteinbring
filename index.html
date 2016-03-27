@@ -24,12 +24,6 @@
 			  </div>
 			  <div id="navbar" class="navbar-collapse collapse">
 			    <ul class="nav navbar-nav">
-			      <!-- <li class="dropdown" rv-class-active="data.selected | eq 'blog'">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Blog Posts <span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li rv-each-post="data.posts" rv-class-active="data.currentPost.slug | eq post.slug"><a onclick="toggle('blog');toggleBlog(this.value);" rv-value="post.slug">{post.title}</a></li>
-			        </ul>
-			      </li> -->
 			      <li rv-class-active="data.selected | eq 'home'"><a onclick="toggle('home');">Blog</a></li>
 			      <li rv-class-active="data.selected | eq 'about'"><a onclick="toggle('about');">About Joe</a></li>
 			      <li rv-class-active="data.selected | eq 'projects'"><a onclick="toggle('projects');">Projects</a></li>
@@ -62,7 +56,7 @@
 				<div class="page-header">
 					<h1 rv-text="data.currentPost.title"></h1>
 				</div>
-				<h2>{data.currentPost.date}</h2>
+				<h2 rv-html="data.currentPost.date | longDate"></h2>
 				<div rv-html="data.currentPost.content"></div>
 			</div>
 		</div>
@@ -115,18 +109,10 @@
 								    <button type="button" class="btn btn-default" onclick="localStorage.clear();">Clear Cached Data</button>
 								  </div>
 								  <div class="btn-group" role="group">
-								    <button type="button" class="btn btn-default" onclick="getMainDetails();getPages();getPosts();">Refresh Cached Data</button>
+								    <button type="button" class="btn btn-default" onclick="getMainDetails();getPages();getPosts();">
+								    	Refresh Cached Data
+								    </button>
 								  </div>
-								  <!-- <div class="btn-group" role="group">
-									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Themes <span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu">
-										<li><a href="#" onclick="$.material.init();">Material Design</a></li>
-										<li><a href="#">Theme 2</a></li>
-										<li><a href="#">Theme 3</a></li>
-									</ul>
-								  </div> -->
 								</div>
 							</div>
 						</div>

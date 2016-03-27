@@ -17,6 +17,13 @@
 #about p{
 	float: right;
 }
+/*For the blog pages*/
+#blog h2{
+	font-size: 14px;
+	color: grey;
+	margin-top:-30px;
+	margin-bottom:30px;
+}
 /*For the "Resume" page*/
 h2[itemprop="name"]{
 	float: left;
