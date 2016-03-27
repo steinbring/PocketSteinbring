@@ -117,3 +117,16 @@ section#affiliations-activities header{
 #affiliations-activities .date, #affiliations-activities .title{
 	margin-left: 20px;
 }
+
+#loadingDialog .modal-header{
+	background-color: white;
+	border-bottom:none;
+	height: 100%;
+}
+#loadingDialog #JoeFace{
+	text-align: center;
+}
+#loadingDialog #JoeFace img{
+	width:50%;
+	height: 50%;
+}

@@ -70,6 +70,8 @@ var getPosts = function(){
     }
     // Now that we have a value from the server, cache the value for later
     localStorage.setItem("posts", JSON.stringify(data.posts));
+    // Close the "loading" screen
+    $('#loadingDialog').modal('hide');
   };
 
   request.onerror = function() {
@@ -110,6 +112,8 @@ var toggleBlog = function(postSlug){
 getOldValues();
 // Is the user online? If they are, refresh the data.
 if (navigator.onLine) {
+  // Open the "Loading" screen
+  $('#loadingDialog').modal('show');
   getMainDetails();
   getPages();
   getPosts();
