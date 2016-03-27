@@ -51,3 +51,6 @@ section#experience header{
 #experience article section{
 	clear: both;
 }
+#experience .details{
+	margin-left: 20px;
+}
