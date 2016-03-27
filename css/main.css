@@ -61,3 +61,59 @@ section#experience header{
 #experience .details{
 	margin-left: 20px;
 }
+
+section#education header{
+	font-size: 16px;
+	text-align: center;
+}
+#education article header{
+	font-size: 14px;
+	text-align: left;
+}
+#education article header [itemprop="name"]{
+	float:left;
+}
+#education article header [itemprop="location"]{
+	float:left;
+	padding-left: 10px;
+}
+#education article header [itemprop="location"]::before{
+	content: "(";
+}
+#education article header [itemprop="location"]::after{
+	content: ")";
+}
+#education article section{
+	clear: both;
+}
+#education .date, #education .title{
+	margin-left: 20px;
+}
+
+section#affiliations-activities header{
+	font-size: 16px;
+	text-align: center;
+}
+#affiliations-activities article header{
+	font-size: 14px;
+	text-align: left;
+}
+#affiliations-activities article header [itemprop="name"]{
+	float:left;
+}
+#affiliations-activities article header [itemprop="location"]{
+	float:left;
+	padding-left: 10px;
+}
+#affiliations-activities article header [itemprop="location"]::before{
+	content: "(";
+}
+#affiliations-activities article header [itemprop="location"]::after{
+	content: ")";
+}
+#affiliations-activities article section{
+	clear: both;
+}
+#affiliations-activities .date, #affiliations-activities .title{
+	margin-left: 20px;
+}
