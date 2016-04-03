@@ -33,7 +33,9 @@ var getPages = function(){
     if (request.status >= 200 && request.status < 400) {
       // Success!
       // Set pages to equal the query results
-      var tempPages = JSON.parse(request.responseText);
+      // Add target to each link, to make sure it opens in an external browser
+      withTargetAdded = request.responseText.replace(new RegExp('a href', 'g'), 'a target=\'_blank\' href');
+      var tempPages = JSON.parse(withTargetAdded);
       for (var i = tempPages.length - 1; i >= 0; i--) {
         if(tempPages[i].slug == 'projects')
           data.pages.projects = tempPages[i];
@@ -64,7 +66,9 @@ var getPosts = function(){
     if (request.status >= 200 && request.status < 400) {
       // Success!
       // Set pages to equal the query results
-      data.posts = JSON.parse(request.responseText);
+      // Add target to each link, to make sure it opens in an external browser
+      withTargetAdded = request.responseText.replace(new RegExp('a href', 'g'), 'a target=\'_blank\' href');
+      data.posts = JSON.parse(withTargetAdded);
     } else {
       // We reached our target server, but it returned an error
     }
