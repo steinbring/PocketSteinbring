@@ -1,5 +1,7 @@
-PocketJoe
+PocketSteinbring
 =========
+
+2016-04-03: I renamed it to PocketSteinbring
 
 2016-02-27: I did a ground-up rewrite of the app, using bootstrap and rivets.
 
