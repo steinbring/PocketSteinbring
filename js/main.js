@@ -1,5 +1,5 @@
 // This app depends of the fact that wp-json is installed on the server
-var websiteLocation = 'http://steinbring.net';
+var websiteLocation = 'https://steinbring.net';
 var data = {mainDetails:'',pages:{projects:'',resume:'',about:''},selected:'home',posts:'',currentPost:''};
 
 var getMainDetails = function(){
